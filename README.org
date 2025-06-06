@@ -2,13 +2,14 @@
 
 * Beamer Poster Setup File
 
-#+HTML: <img src="img/poster-snap.png" alt="Systemcrafter Styled Poster Snapshot" width="250">
+#+HTML: <img src="img/poster-sc-snap.png" alt="Systemcrafter Styled Poster Snapshot" width="250"> <img src="img/poster-d-snap.png" alt="Donder Styled Poster Snapshot" width="250">
 
 This is a fork of an original beamer poster setup implementing a new
-easily customizable style as shown in the image above. Below you will
-find two sections, first, under *Legacy*, the original README. Then
-under *Marc's add-ons* some detail on the changes and extensions I
-made for my convenience, and that I hope may be useful for you, too.
+easily customizable style as shown in the image above, plus the
+original style shown next to it. Below you will find two
+sections. First, under *Legacy*, the original README. Then under
+*Marc's add-ons* some detail on the changes and extensions I made for
+my convenience, and that I hope may be useful for you, too.
 
 In a nutshell:
 - use a =Makefile= to automate the different steps
