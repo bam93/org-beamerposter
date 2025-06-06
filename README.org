@@ -2,6 +2,18 @@
 
 * Beamer Poster Setup File
 
+This is a fork of an original beamer poster setup. Below you will find
+two sections, first, under *Legacy*, the original README. Then under
+*Marc's add-ons* some detail on the changes and extensions I made for
+my convenience, and that I hope may be useful for you, too.
+
+In a nutshell:
+- use a =Makefile= to automate the different steps
+- provide easy customization of the style(s) using =yaml= and =mustache= files
+- add (and focus on) a "Systemcrafter" style for the poster
+- some helper script and some graphics for modifying the style
+
+* Legacy
 The beamer poster setup in this repository encapsulates most boilerplate required to get a nice Org -> Poster export.
 It includes not only the necessary LaTeX headers and Org Mode options, but eventually will also include a set of useful macros to help defining things such as authors and affiliations.
 To get it working, and to be able to correctly use the template provided, add the following to your init (or evaluate it before export):
@@ -108,3 +120,19 @@ Org Mode's column view is not a beamer specific feature, but it can be tuned for
  This incantation defines the format for viewing org property information in [[https://orgmode.org/worg/org-tutorials/org-column-view-tutorial.html][column mode]]. This mode allows you to easily adjust the values of the properties for any headline in your document. To see column view press =C-c C-x C-c=.
 To quit, place the cursor on top of any heading and press =q=.
 
+
+* Marc's add-ons
+** =logo_tiler.py= for the sidebar logo
+The original repo had a colored bar on the left side, coherent with
+the original "Donder" style. I wanted to replace that by an
+image-based side-bar without changing too much the structure of the
+template and delving into beamer config. To achieve this, several
+images of different sizes are needed for the side-bar. They are
+generated from a vertically seamlessly tiled base image with this
+script.
+
+In its present state this is an ultra-simple script and the base
+filename is hardcoded as =img/circuit1t.png= (the =t= is so I recall
+this image should be vertically tile-able). The script generates four
+image files =tiled_xxx.png=, where xxx is a number representing the
+height of the image.

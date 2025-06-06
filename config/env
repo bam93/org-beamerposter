@@ -1,0 +1,8 @@
+MYSTYLE=systemcrafter
+#MYSTYLE=donder
+TEMPLATE=styles/$(MYSTYLE)-beamertheme.mustache
+CONFIG_YAML=styles/$(MYSTYLE)-config.yml
+CONFIG_JSON=config.json
+OUTSTYLE=tex/beamerorgposter.sty
+LOGOTILESCR=script/logo_tiler.py
+POSTER=poster
