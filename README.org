@@ -134,6 +134,17 @@ I tried to logically subdivide into directories as follows:
   also need to position any bibliographic references in a
   =Publications.bib= file in that subdirectory
   
+** Overall process
+1. Generate your style via =make style=
+2. Generate the style sidebar (if used) via =make logo=
+3. Edit your =org-src/template.org= file
+   1. see about Emacs usage/shortcuts in the =Legacy= section
+4. From within Emacs, generate the =.tex= file via =C-e C-l C-b=
+5. Generate the =.pdf= files via =make gen=
+6. Admire your beautiful poster with =make v=
+7. Cleanup intermediate files with =make clean=
+8. Start over with =make distclean=
+
 ** Configurable styles
 I tried to generate the original template by extracting the variables
 I thought I'd likely want to change and putting them into a =yaml=
@@ -147,6 +158,9 @@ This was the first step to implement the Systemcrafter's inspired
 style defined by the couple =styles/systemcrafter-config.yml= and
 =styles/systemcrafter-beamertheme.mustache=. You can easily play with
 the =.yml= file to change colors for instance.
+
+To generate the style (based on your configuration settings), execute
+the Makefile target =make style=.
 
 ** =logo_tiler.py= for the sidebar logo
 The original repo had a colored bar on the left side, coherent with
