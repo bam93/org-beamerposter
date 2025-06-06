@@ -6,8 +6,8 @@
 | Systemcrafter styled        | Donder style               |
 
 This is a fork of an original beamer poster setup implementing a new
-easily customizable style as shown in the image above, plus the
-original style shown next to it. Below you will find two
+easily customizable style as shown in the image above, plus the (very
+close-to) original style shown next to it. Below you will find two
 sections. First, under *Legacy*, the original README. Then under
 *Marc's add-ons* some detail on the changes and extensions I made for
 my convenience, and that I hope may be useful for you, too.
