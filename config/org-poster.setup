@@ -35,6 +35,15 @@ To get it working, and to be able to correctly use the template provided, add th
 #+RESULTS:
 | portrait_poster_a0 | \documentclass[t]{beamer} |
 
+# ;; Org-cite setup
+# (require 'oc) ;; Org-cite core
+# (require 'oc-csl) ;; Use CSL processor
+# (require 'oc-biblatex) ;; Optional: biblatex backend if you're using LaTeX
+
+# (setq org-cite-export-processors
+#       '((latex biblatex)
+#         (t csl)))  ;; fallback for others like HTML
+
 The defined class landscape_poster_a1 is meant can be compiled with both PdfLaTeX or XeLaTeX. The template locally redefines =org-latex-pdf-process= to ensure that the compilation works as expected.
 
 ** Beamer Fundamental Concepts
@@ -113,7 +122,8 @@ To quit, place the cursor on top of any heading and press =q=.
 
 * LaTeX headers :noexport:
 
-#+latex_header: \usepackage[backend=biber, maxbibnames=2, maxcitenames=2, sortcites=true, style=authoryear]{biblatex}
+# #+latex_header: \usepackage[backend=biber, maxbibnames=2, maxcitenames=2, sortcites=true, style=authoryear]{biblatex}
+#+latex_header: \usepackage[style=numeric,language=english,backend=biber]{biblatex}
 # #+latex_header: \setbeamertemplate{bibliography item}{\insertbiblabel}
 #+latex_header: \AtEveryBibitem{%
 #+latex_header:  \clearfield{issn} % Remove issn
@@ -124,8 +134,8 @@ To quit, place the cursor on top of any heading and press =q=.
 #+latex_header: }
 # #+latex_header: \setbeamerfont{frametitle}{size={\fontsize{65}{50}}}
 #+latex_header: \renewcommand*{\bibfont}{\small}
-# Ideally the beamerthemedonders would be properly installed in the system, but the workaround is fine for now.
-#+LATEX_HEADER: \usepackage{./beamerthemedonders}
+# Ideally the beamerorgposter would be properly installed in the system, but the workaround is fine for now.
+#+LATEX_HEADER: \usepackage{beamerorgposter}
 # #+LATEX_HEADER: \usepackage[export]{adjustbox}
 # #+LATEX_HEADER: \usepackage{graphicx,caption}
 # #+LATEX_HEADER: \usepackage{eurosym}
@@ -133,11 +143,12 @@ To quit, place the cursor on top of any heading and press =q=.
 # #+LATEX_HEADER: \usepackage{textcomp}
 # #+LATEX_HEADER: \usepackage{bibentry}
 # useful for XeLaTeX
-# #+latex_header: \usepackage{fontspec}
-# #+latex_header: \usepackage{polyglossia}
-#+latex_header: \usepackage[T1]{fontenc} 
-#+latex_header: \usepackage[utf8]{inputenc}
+#+latex_header: \usepackage{fontspec}
+#+latex_header: \usepackage{fontenc} 
 #+latex_header: \usepackage{microtype}
+#+latex_header: \usepackage{xstring}
+#+latex_header: \setlength{\emergencystretch}{2em} % Fix overflows
+#+latex_header: \usepackage{polyglossia}
 
 * Org Mode Options :noexport:
 
