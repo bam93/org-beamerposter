@@ -1,6 +1,6 @@
 #+TITLE: Org Beamerposter
 
-* Beamer Poster Setup File
+* Introduction
 
 | [[file:img/poster-sc-snap.png]] | [[file:img/poster-d-snap.png]] |
 | Systemcrafter styled        | Donder style               |
@@ -19,6 +19,7 @@ In a nutshell:
 - some helper script and some graphics for modifying the style
 
 * Legacy
+** Beamer Poster Setup File
 The beamer poster setup in this repository encapsulates most boilerplate required to get a nice Org -> Poster export.
 It includes not only the necessary LaTeX headers and Org Mode options, but eventually will also include a set of useful macros to help defining things such as authors and affiliations.
 To get it working, and to be able to correctly use the template provided, add the following to your init (or evaluate it before export):
