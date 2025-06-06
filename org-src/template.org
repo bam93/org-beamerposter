@@ -1,13 +1,21 @@
-#+TITLE: MolPlay: Interactive Molecular Simulations and Analyses for Everyone
+#+TITLE: Interactive Molecular Simulations and Analyses for Everyone
 #+STARTUP: beamer
 #+STARTUP: align fold
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 # #+LATEX_CLASS: landscape_poster_a1
 #+LATEX_CLASS: portrait_poster_a0
-#+SETUPFILE: ./donders-poster.setup
+#+SETUPFILE: ../config/org-poster.setup
 #+LATEX_HEADER:\addbibresource{Publications.bib}
+#+cite_export: biblatex
+#+EXPORT_FILE_NAME: ../tex/poster
+#+MACRO: v @@latex:\vspace*{1.8cm}@@
 
 # ----------------------------------------------------------------------
+# https://www.iconpacks.net/free-icon/website-black-round-circle-24770.html
+# logos UPCite, IBPC ?
+# twitter etc. logos
+# usb key image
+
 ** Authors and affiliations                                :B_ignoreheading:
 :PROPERTIES:
 :BEAMER_env: ignoreheading
@@ -31,134 +39,228 @@
 
 ** Column 1                                                           :BMCOL:
    :PROPERTIES:
-   :BEAMER_col: 0.3
+   :BEAMER_col: 0.27
    :END:
 
-*** Introduction :B_block:
+*** \emoji{chequered-flag} Introduction                           :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros. Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  [cite:@Shrout1979] In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  *Praesent fermentum tempor tellus.*  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  /Phasellus purus./  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
-
- 
-*** Design :B_block:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:
-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-- Aliquam erat volutpat.  Nunc eleifend leo vitae magna.
-- In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.
-- Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.
-
-Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. [cite:@Gratton2018]
-
-*** Marc's tests                                                  :B_block:
-:PROPERTIES:
-:BEAMER_env: block
-:END:
-**** Quotation (title invisible)                             :B_quotation:
-:PROPERTIES:
-:BEAMER_env: quotation
-:END:
-This is a quotation block.
-**** Verse (title invisible)                                     :B_verse:
-:PROPERTIES:
-:BEAMER_env: verse
-:END:
-Here we have a verse
-Now come on
-
-**** Structurenv (title invisible)                        :B_structureenv:
-:PROPERTIES:
-:BEAMER_env: structureenv
-:END:
-A structureenv whatever this is. Not title. Greyish.
-**** Appendix (title invisible)                               :B_appendix:
-:PROPERTIES:
-:BEAMER_env: appendix
-:END:
-Now we have an appendix. There is no title for it.
-**** BeamerColorBox (title invisible)                   :B_beamercolorbox:
-:PROPERTIES:
-:BEAMER_env: beamercolorbox
-:END:
-A beamer color box.
-
-**** Example Block                                        :B_exampleblock:
-:PROPERTIES:
-:BEAMER_env: exampleblock
-:END:
-This is an exampleblock.
-#+begin_src shell
-  ls code
-  pwd
-#+end_src
-**** Example                                                   :B_example:
-:PROPERTIES:
-:BEAMER_env: example
-:END:
-An example here.
-**** Test 2                                                       :B_note:
-:PROPERTIES:
-:BEAMER_env: note
-:END:
-This is a note. It seems invisible.
-
-**** Alert Block                                            :B_alertblock:
+**** The Challenge                                          :B_alertblock:
 :PROPERTIES:
 :BEAMER_env: alertblock
 :END:
-An alert block. Is it particularly visible?
+- *Interactive Molecular Simulations & Analyses* (IMSA) are powerful but underutilized
+- High technical barriers limit adoption
+- Complex installations discourage exploration
+- Limited access to specialized hardware
 
-**** Proof                                                       :B_proof:
+\vspace{5mm}
+
+#+NAME: Molplay Banner
+#+CAPTION: Interactive Molecular Simulation and Analysis examples.
+[[../img/molplay-banner1.png]]
+
+**** One Possible Solution: MolPlay [cite:@molplayurl; @hal-04794544] :B_alertblock:
 :PROPERTIES:
-:BEAMER_env: proof
+:BEAMER_env: alertblock
 :END:
-This is a proof.
-**** Test                                                       :B_noteNH:
+
+MolPlay is a /bootable USB platform/ providing turnkey access to IMSA.
+
+\vspace{5mm}
+
+Key Features:
+- No installation required
+- Works on standard hardware
+- User-friendly interface
+- Curated examples included
+- Portable and self-contained
+ 
+{{{v}}}
+
+*** \emoji{magnifying-glass-tilted-right} Architecture                                         :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+#+NAME: Molplay Architecture
+#+CAPTION: An overview of MolPlay's architecture.
+[[../img/molplay-scheme.png]]
+
+**** Components                                             :B_alertblock:
 :PROPERTIES:
-:BEAMER_env: noteNH
+:BEAMER_env: alertblock
 :END:
-A note NH .. what is that? Also invisible.
+- *Batocera Linux*: Lightweight base OS
+- *Guix Package Manager*: Scientific software distribution
+- *Emulation Station*: Intuitive menu interface
+- *MDDriver Protocol*: Connects simulation components
+
+{{{v}}}
+  
+*** \emoji{microscope} Task Taxonomy                              :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+We identified three *main IMSA task categories*:
+- *Manipulate*: Model construction, deformation, force application
+- *Explore*: Conformational sampling, rare event investigation
+- *Analyze*: Real-time visualization, interaction scrutiny
+
+\vspace{5mm}
+
+These are depicted below:
+
+#+NAME: Task Taxonomy
+#+CAPTION: Task categories for interactive approaches.
+[[../img/tasks.png]]
+
 ** Column 2                                                           :BMCOL:
    :PROPERTIES:
-   :BEAMER_col: 0.3
+   :BEAMER_col: 0.27
    :END:
 
-*** Analysis :B_block:
+*** \emoji{dna} Use Cases                                         :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-Nam euismod tellus id erat.  Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
 
+#+NAME: IMSA Use Cases
+#+CAPTION: Four use cases for interactive simulations.
+[[../img/usecases.png]]
 
-*** Results :B_block:
+The examples above represent:
+- *A*: Preparing simulations - bending transmembrane helices
+- *B*: Integrative modeling - ryanodine receptor reconstruction
+- *C*: Mechanical properties - SNARE complex investigation
+- *D*: Guided exploration - siderophore transport pathway
+  
+{{{v}}}  
+
+*** \emoji{clapper} Ask for a Demo! \emoji{sparkles}              :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-Suspendisse potenti. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  
 
-#+NAME: Radboud Logo
-#+CAPTION: This is a figure.
-[[../img/molplay.png]]
+\vspace*{1.0cm}  
 
-Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.
+#+NAME: MolPlay Demo Time
+[[../img/demo.png]]
+
+{{{v}}}  
+
+*** \emoji{video-game} User Experience                            :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+
+#+NAME: MolPlay WalkThrough
+#+CAPTION: MolPlay's user interface is simple and user friendly.
+[[../img/menu.png]]
+
+\vspace{5mm}
+
+Features:
+- Simple boot from USB
+- Intuitive navigation
+- Built-in tutorials and documentation
+- Multiple levels of expertise
+
+\vspace*{1.5cm}  
+
+*** \emoji{bullseye} Target Applications                          :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+**** Education & Outreach                                   :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+- Science fairs and museums
+- Classroom demonstrations
+- Hands-on learning experiences
+
+**** Research                                               :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+- Hypothesis validation
+- Preliminary investigations
+- Collaborative analysis
+
+{{{v}}}  
+
+*** \emoji{game-die} Featured Simulation Engine [cite:@biospringurl; @hal-05039981]
+
+\vspace*{1.0cm}  
+
+#+NAME: BioSpring
+[[../img/biospring.png]]
 
   
 
 ** Column 3                                                           :BMCOL:
    :PROPERTIES:
-   :BEAMER_col: 0.3
+   :BEAMER_col: 0.27
    :END:
 
-*** Conclusions :B_block:
+*** \emoji{eyes} Visual Analysis                                  :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+
+#+NAME: Smiffer
+#+CAPTION: Visual analysis of statistical molecular interaction fields [cite:@smifferurl; @smifferpreprint].
+[[../img/smiffer.png]]
+
+{{{v}}}  
+
+*** \emoji{chart-increasing} Impact & Future                      :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- *Tested* at international workshop (~30 participants)
+- *Positive feedback* from diverse user groups
+- *Expandable* catalog of examples
+- *Modular design* for future integrations
+
+{{{v}}}  
+
+*** \emoji{interrobang} Conclusions                               :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl. QED.
+MolPlay bridges the gap between advanced IMSA techniques and accessible education/research tools. By consolidating expertise into a portable platform, it promotes broader adoption of interactive molecular simulations across disciplines.
 
+{{{v}}}  
 
-*** References and links                                          :B_block:
+*** \emoji{performing-arts} Acknowledgments                       :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+M.B. thanks past (Sébastien Doutreligne, André Lanrezac, Xavier
+Martinez, Joao Rodriguez, Alex Tek) and present (Olivier Delalande,
+Nicolas Férey, Benoist Laurent, Hubert Santuz) collaborators who were
+essential in laying the foundations for the work described on this
+poster.
+
+{{{v}}}  
+
+*** \emoji{euro-banknote} Funding                                 :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+This research was funded by the “Initiative d’Excellence” program from
+the French State, grants “DYNAMO,” ANR-11-LABX-0011, and “CACSICE,”
+ANR-11-EQPX-0008. I thank ANR for support of grants “PIRATE,”
+ANR-21-CE45-0014 and “MINOMICS,” ANR- 19-CE45-0017. Many thanks to
+Sesame Ile-de-France for co-funding the display wall used for testing
+some of the interactive use cases described on the poster.
+
+{{{v}}}  
+
+*** \emoji{bookmark-tabs} References and links                    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
@@ -167,6 +269,124 @@ Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consect
   \printbibliography
   #+END_EXPORT
 
+{{{v}}}  
+
+*** \emoji{telephone-receiver} Contact                            :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+
+#+ATTR_LATEX: :width 0.035\linewidth :center nil
+[[../img/atsign.png]]    Email: [[mailto:baaden@smplinux.de][baaden@smplinux.de]]
+\vspace*{0.3cm}
+
+#+ATTR_LATEX: :width 0.035\linewidth :center nil
+[[../img/website.png]]    Website: [[https://www.baaden.ibpc.fr][www.baaden.ibpc.fr]]
+\vspace*{0.3cm}
+
+#+ATTR_LATEX: :width 0.035\linewidth :center nil
+[[../img/linkedin.png]]    LinkedIn: [[https://linkedin.com/in/baaden][baaden]]
+\vspace*{0.3cm}
+
+#+ATTR_LATEX: :width 0.035\linewidth :center nil
+[[../img/mastodon.png]]    Mastodon: [[https://mastodon.social/@baam93][@baam93@mastodon.social]]
+\vspace*{0.3cm}
+
+#+ATTR_LATEX: :width 0.035\linewidth :center nil
+[[../img/bluesky.png]]    Bluesky: [[https://bsky.app/profile/baam93.bsky.social][@baam93.bsky.social]]
+\vspace*{0.3cm}
+
+#+ATTR_LATEX: :width 0.035\linewidth :center nil
+[[../img/twitterx.png]]    Twitter/X: [[https://x.com/baam93][@baam93]]
+{{{v}}}  
+
+#+NAME: Caffeine
+#+ATTR_LATEX: :width 0.5\linewidth :placement [H] :center nil
+#+BEGIN_EXPORT latex
+% \begin{flushright}
+% \includegraphics[width=1.5\linewidth]{../img/caffeine.png}
+% \end{flushright}
+\begin{textblock*}{5cm}(55.0cm,102cm) % Width x (X,Y) from top-left
+\includegraphics[width=6.0\linewidth]{../img/caffeine.png}
+\end{textblock*}
+#+END_EXPORT
+
+#+NAME: Cleusb
+#+ATTR_LATEX: :width 0.5\linewidth :placement [H] :center nil
+#+BEGIN_EXPORT latex
+\begin{textblock*}{5cm}(57cm,4cm) % Width x (X,Y) from top-left
+\includegraphics[width=2.0\linewidth]{../img/cleusb.png}
+\end{textblock*}
+#+END_EXPORT
+
+# *** Marc's tests                                                  :B_block:
+# :PROPERTIES:
+# :BEAMER_env: block
+# :END:
+# **** Quotation (title invisible)                             :B_quotation:
+# :PROPERTIES:
+# :BEAMER_env: quotation
+# :END:
+# This is a quotation block.
+# **** Verse (title invisible)                                     :B_verse:
+# :PROPERTIES:
+# :BEAMER_env: verse
+# :END:
+# Here we have a verse
+# Now come on
+
+# **** Structurenv (title invisible)                        :B_structureenv:
+# :PROPERTIES:
+# :BEAMER_env: structureenv
+# :END:
+# A structureenv whatever this is. Not title. Greyish.
+# **** Appendix (title invisible)                               :B_appendix:
+# :PROPERTIES:
+# :BEAMER_env: appendix
+# :END:
+# Now we have an appendix. There is no title for it.
+# **** BeamerColorBox (title invisible)                   :B_beamercolorbox:
+# :PROPERTIES:
+# :BEAMER_env: beamercolorbox
+# :END:
+# A beamer color box.
+
+# **** Example Block                                        :B_exampleblock:
+# :PROPERTIES:
+# :BEAMER_env: exampleblock
+# :END:
+# This is an exampleblock.
+# #+begin_src shell
+#   ls code
+#   pwd
+# #+end_src
+# **** Example                                                   :B_example:
+# :PROPERTIES:
+# :BEAMER_env: example
+# :END:
+# An example here.
+# **** Test 2                                                       :B_note:
+# :PROPERTIES:
+# :BEAMER_env: note
+# :END:
+# This is a note. It seems invisible.
+
+# **** Alert Block                                            :B_alertblock:
+# :PROPERTIES:
+# :BEAMER_env: alertblock
+# :END:
+# An alert block. Is it particularly visible?
+
+# **** Proof                                                       :B_proof:
+# :PROPERTIES:
+# :BEAMER_env: proof
+# :END:
+# This is a proof.
+# **** Test                                                       :B_noteNH:
+# :PROPERTIES:
+# :BEAMER_env: noteNH
+# :END:
+# A note NH .. what is that? Also invisible.
 
 
 * Local Settings :noexport:
