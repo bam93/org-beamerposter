@@ -1,5 +1,5 @@
 MYSTYLE=systemcrafter
-#MYSTYLE=donder
+MYSTYLE=donder
 TEMPLATE=styles/$(MYSTYLE)-beamertheme.mustache
 CONFIG_YAML=styles/$(MYSTYLE)-config.yml
 CONFIG_JSON=config.json
