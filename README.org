@@ -136,3 +136,5 @@ filename is hardcoded as =img/circuit1t.png= (the =t= is so I recall
 this image should be vertically tile-able). The script generates four
 image files =tiled_xxx.png=, where xxx is a number representing the
 height of the image.
+
+Run the script using the =make logo= Makefile target.
