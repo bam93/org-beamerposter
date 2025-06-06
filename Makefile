@@ -11,7 +11,7 @@ info:
 	@printf "\n"
 	@git status .
 
-gen:
+gen: $(OUTSTYLE)
 	$(info )
 	$(info info:: generating summary index)
 	-( cd tex ; latexmk -pdflatex='lualatex -shell-escape -interaction batchmode' -pdf -bibtex -f $(POSTER).tex )
