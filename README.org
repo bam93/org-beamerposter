@@ -4,6 +4,8 @@
 
 [[./img/poster-snap.png][Systemcrafter Styled Poster Snapshot]]
 
+![Systemcrafter Styled Poster Snapshot](img/poster-snap.png)
+
 This is a fork of an original beamer poster setup. Below you will find
 two sections, first, under *Legacy*, the original README. Then under
 *Marc's add-ons* some detail on the changes and extensions I made for
