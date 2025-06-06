@@ -2,6 +2,9 @@
 
 * Beamer Poster Setup File
 
+| [[file:img/poster-sc-snap.png]] | [[file:img/poster-d-snap.png]] |
+
+
 #+HTML: <img src="img/poster-sc-snap.png" alt="Systemcrafter Styled Poster Snapshot" width="200" style="float:left;margin-right:10px;"><img src="img/poster-d-snap.png" alt="Donder Styled Poster Snapshot" width="200" style="float:left;">
 #+HTML: <div style="clear:both;"></div>
 
