@@ -122,6 +122,32 @@ To quit, place the cursor on top of any heading and press =q=.
 
 
 * Marc's add-ons
+** Directory reconfiguration
+I tried to logically subdivide into directories as follows:
+- =script=: helper scripts
+- =img=: images and logos
+- =config=: configuration-related files
+- =styles=: style-related settings and templates
+- =org-src=: the contents for the poster in org-mode syntax
+- =tex=: directory where the =.tex= file is created and the =.pdf=
+  generation takes places, also contains all intermediate files. You
+  also need to position any bibliographic references in a
+  =Publications.bib= file in that subdirectory
+  
+** Configurable styles
+I tried to generate the original template by extracting the variables
+I thought I'd likely want to change and putting them into a =yaml=
+config file. For the original style this has become
+=styles/donder-config.yml=. These values are filled in the
+corresponding mustache template
+=styles/donder-beamertheme.mustache=. Such settings are defined in
+=config/env= via the =MYSTYLE= and the =TEMPLATE= values.
+
+This was the first step to implement the Systemcrafter's inspired
+style defined by the couple =styles/systemcrafter-config.yml= and
+=styles/systemcrafter-beamertheme.mustache=. You can easily play with
+the =.yml= file to change colors for instance.
+
 ** =logo_tiler.py= for the sidebar logo
 The original repo had a colored bar on the left side, coherent with
 the original "Donder" style. I wanted to replace that by an
