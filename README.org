@@ -152,7 +152,8 @@ config file. For the original style this has become
 =styles/donder-config.yml=. These values are filled in the
 corresponding mustache template
 =styles/donder-beamertheme.mustache=. Such settings are defined in
-=config/env= via the =MYSTYLE= and the =TEMPLATE= values.
+=config/env= via the =MYSTYLE= value. Right now the =donder= and the
+=systemcrafter= style are provided.
 
 This was the first step to implement the Systemcrafter's inspired
 style defined by the couple =styles/systemcrafter-config.yml= and
@@ -178,3 +179,8 @@ image files =tiled_xxx.png=, where xxx is a number representing the
 height of the image.
 
 Run the script using the =make logo= Makefile target.
+
+** Known issues
+The tex runs formally end with an error, despite the =.pdf= file being
+properly generated. This seems more like a PDFLatex/Latexmk/Lualatex
+incompatibility and I haven't yet been able to sort it out.
