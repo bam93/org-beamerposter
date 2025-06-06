@@ -1,22 +1,25 @@
-#+TITLE: This is a Poster Template with a Large Name
+#+TITLE: MolPlay: Interactive Molecular Simulations and Analyses for Everyone
 #+STARTUP: beamer
 #+STARTUP: align fold
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 # #+LATEX_CLASS: landscape_poster_a1
 #+LATEX_CLASS: portrait_poster_a0
 #+SETUPFILE: ./donders-poster.setup
-#+LATEX_HEADER:\addbibresource{~/Papers/bibtex/Publications.bib}
+#+LATEX_HEADER:\addbibresource{Publications.bib}
 
 # ----------------------------------------------------------------------
-** Authors and affiliations                                   :ignore:
+** Authors and affiliations                                :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
 # ----------------------------------------------------------------------
 #+LATEX_HEADER: \author{
-#+LATEX_HEADER: Daniel Gomez$^{1}$ 
+#+LATEX_HEADER: Marc Baaden$^{1}$ 
 #+LATEX_HEADER: \\
 #+LATEX_HEADER: \vspace{5mm}
-#+LATEX_HEADER: \normalsize{$^{1}$Donders Centre for Cognitive Neuroimaging,} 
-#+LATEX_HEADER: \normalsize{Radboud University Nijmegen,}
-#+LATEX_HEADER: \normalsize{Nijmegen, The Netherlands}
+#+LATEX_HEADER: \normalsize{$^{1}$Université Paris Cité, CNRS,} 
+#+LATEX_HEADER: \normalsize{Laboratoire de Biochimie Théorique,}
+#+LATEX_HEADER: \normalsize{13 rue Pierre et Marie Curie, 75005, Paris, France}
 #+LATEX_HEADER: }
 
 * ISMRM Poster :B_fullframe:
@@ -35,7 +38,7 @@
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros. Aliquam erat volutpat.  Nunc eleifend leo vitae magna. parencite:Shrout1979  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  *Praesent fermentum tempor tellus.*  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  /Phasellus purus./  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros. Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  [cite:@Shrout1979] In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  *Praesent fermentum tempor tellus.*  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  /Phasellus purus./  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
 
  
 *** Design :B_block:
@@ -47,8 +50,76 @@ Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulput
 - In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.
 - Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.
 
-Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. parencite:Gratton2018
+Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. [cite:@Gratton2018]
 
+*** Marc's tests                                                  :B_block:
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+**** Quotation (title invisible)                             :B_quotation:
+:PROPERTIES:
+:BEAMER_env: quotation
+:END:
+This is a quotation block.
+**** Verse (title invisible)                                     :B_verse:
+:PROPERTIES:
+:BEAMER_env: verse
+:END:
+Here we have a verse
+Now come on
+
+**** Structurenv (title invisible)                        :B_structureenv:
+:PROPERTIES:
+:BEAMER_env: structureenv
+:END:
+A structureenv whatever this is. Not title. Greyish.
+**** Appendix (title invisible)                               :B_appendix:
+:PROPERTIES:
+:BEAMER_env: appendix
+:END:
+Now we have an appendix. There is no title for it.
+**** BeamerColorBox (title invisible)                   :B_beamercolorbox:
+:PROPERTIES:
+:BEAMER_env: beamercolorbox
+:END:
+A beamer color box.
+
+**** Example Block                                        :B_exampleblock:
+:PROPERTIES:
+:BEAMER_env: exampleblock
+:END:
+This is an exampleblock.
+#+begin_src shell
+  ls code
+  pwd
+#+end_src
+**** Example                                                   :B_example:
+:PROPERTIES:
+:BEAMER_env: example
+:END:
+An example here.
+**** Test 2                                                       :B_note:
+:PROPERTIES:
+:BEAMER_env: note
+:END:
+This is a note. It seems invisible.
+
+**** Alert Block                                            :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+An alert block. Is it particularly visible?
+
+**** Proof                                                       :B_proof:
+:PROPERTIES:
+:BEAMER_env: proof
+:END:
+This is a proof.
+**** Test                                                       :B_noteNH:
+:PROPERTIES:
+:BEAMER_env: noteNH
+:END:
+A note NH .. what is that? Also invisible.
 ** Column 2                                                           :BMCOL:
    :PROPERTIES:
    :BEAMER_col: 0.3
@@ -69,7 +140,7 @@ Suspendisse potenti. Pellentesque dapibus suscipit ligula.  Donec posuere augue 
 
 #+NAME: Radboud Logo
 #+CAPTION: This is a figure.
-[[./Logos/Radboud.png]]
+[[../img/molplay.png]]
 
 Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.
 
@@ -87,7 +158,7 @@ Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Inte
 Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl. QED.
 
 
-*** References :B_block:
+*** References and links                                          :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
@@ -102,5 +173,7 @@ Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consect
 
 # Local Variables:
 # org-export-allow-bind-keywords: t
-# org-latex-pdf-process: ("latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf -bibtex -f %f")
+# org-latex-pdf-process: ("/Library/TeX/texbin/latexmk -pdflatex='/Library/TeX/texbin/lualatex -shell-escape -interaction nonstopmode' -pdf -bibtex -f %f")
 # End:
+# # org-latex-pdf-process: ("latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf -bibtex -f %f")
+# # org-latex-pdf-process: ("/Library/TeX/texbin/xelatex -shell-escape -interaction nonstopmode -output-directory=%o %f")
