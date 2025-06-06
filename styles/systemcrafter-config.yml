@@ -1,0 +1,96 @@
+theme_name: donders
+color_model: rgb
+
+top_logo: "../img/qrcode.png"
+left_bar_4: "../img/tiled_4.png"
+left_bar_9: "../img/empty.png"
+left_bar_13: "../img/empty.png"
+left_bar_119: "../img/tiled_119.png"
+bottom_logo: "../img/logos.png"
+
+fonts:
+  sans: "Source Sans Pro"
+  serif: "Source Serif Pro"
+  mono: "Source Code Pro"
+  package: sourcesanspro
+
+colors:
+# almost white text
+  - name: whiteish
+    hex: "EEFFFF"
+# light green
+  - name: lightgreen
+    hex: "C3E88D"
+# light grey background
+  - name: dkgreybg
+    hex: "292D3E"
+#    hex: "232635"
+# blue
+  - name: lightblue
+    hex: "89AAEB"
+# cyanish
+  - name: lightmauve
+    hex: "C792EA"
+# below crap / unused
+  - name: dmediumred
+    hex: "FF0000"
+  - name: dorange
+    hex: "FF0000"
+  - name: ddarkyellow
+    hex: "FF0000"
+  - name: dyellow
+    hex: "FF0000"
+  - name: dgreen
+    hex: "FF0000"
+
+headline:
+  fg: dkgreybg
+  bg: dkgreybg
+  title_fg: lightblue
+  title_bg: dkgreybg
+  author_fg: lightmauve
+  author_bg: dkgreybg
+  logo_fg: whiteish
+  logo_bg: dkgreybg
+  sep_bg: dkgreybg
+  institute: lightgreen
+
+logo:
+  bg: dkgreybg
+  
+footline:
+  fg: dkgreybg
+  bg: dkgreybg
+
+body:
+  fg: whiteish
+  bg: dkgreybg
+
+item:
+  fg: lightmauve
+    
+block:
+  body_fg: whiteish
+  body_bg: dkgreybg
+  title_fg: dkgreybg
+  title_bg: lightgreen
+
+# Changes have no effects !?
+example:
+  title_fg: lightblue
+  title_bg: lightblue
+
+alerted_text:
+  fg: lightblue
+
+caption:
+  name_fg: whiteish
+
+ref:
+  author: lightblue
+  title: dkgreybg
+  note: lightblue
+  location: lightblue
+  url: lightblue
+  link: lightblue
+  cite: lightmauve

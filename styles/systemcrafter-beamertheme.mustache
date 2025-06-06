@@ -63,6 +63,7 @@
 % body colors and fonts
 % --------------------------------------------------------------------------------
 \setbeamercolor*{normal text}{fg=<% body.fg %>,bg=<% body.bg %>}
+\setbeamercolor{item}{fg=<% item.fg %>}
 
 % --------------------------------------------------------------------------------
 % block environment
@@ -78,6 +79,36 @@
 % \newenvironment<>{references}[1]{%
 % \setbeamerfont{block body}{size=\small}%
 % \begin{block}#2{#1}}{\end{block}}
+
+% \setbeamercolor{bibliography item}{parent=<% ref.author %>}
+% \setbeamercolor{bibliography entry title}{use=normal text,fg=<% ref.title %>}
+\setbeamercolor{bibliography entry author}{use=structure,fg=<% ref.author %>}
+\setbeamercolor{bibliography entry location}{use=structure,fg=<% ref.location %>}
+\setbeamercolor{bibliography entry note}{use=structure,fg=<% ref.note %>}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=<% ref.link %>,
+  urlcolor=<% ref.url %>,
+  citecolor=<% ref.cite %>
+}
+
+% Ne pas mettre en gras les mots comme "and others"
+\DeclareDelimFormat[bib]{finalnamedelim}{\addspace\&\space}
+\DeclareDelimFormat{multinamedelim}{\addcomma\space}
+\DeclareDelimFormat{finalnamedelim}{\addcomma\space}
+
+% Supprimer le gras de "et al."
+\renewcommand*{\mkbibetal}[1]{#1}
+
+% Ne pas mettre "in:" en gras
+\renewcommand*{\inbibpunct}{\addcolon\space}
+\renewcommand*{\bibsentencepunct}{\addperiod\space}
+\DeclareFieldFormat[incollection]{booktitle}{#1}
+
+% "pages" → pas en gras
+\DeclareFieldFormat{pages}{#1}
+\DeclareFieldFormat{pagetotal}{#1}
 
 % --------------------------------------------------------------------------------
 % example environment
@@ -125,7 +156,7 @@
 
 % \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{sidebar canvas left}{
-  \includegraphics[width=3cm,height=\paperheight]{<%{ left_colorbar }%>}
+  \includegraphics[width=3cm,height=\paperheight]{<%{ left_bar_119 }%>}
 }
 \setbeamersize{sidebar width left=3cm}{}
 
@@ -133,7 +164,7 @@
 \setbeamertemplate{headline}{
   \leavevmode
   \begin{columns}[t,onlytextwidth]
-    \includegraphics[width=3cm,height=13cm]{<%{ left_colorbar }%>}
+    \includegraphics[width=3cm,height=13cm]{<%{ left_bar_13 }%>}
     \column{.7\textwidth}
     \begin{beamercolorbox}[wd=\columnwidth, leftskip=2cm, ht=11.55cm]{headline}
       \vskip1.0cm
@@ -149,8 +180,8 @@
     \begin{beamercolorbox}[wd=\columnwidth]{logo}
       % \centering
       % \vskip2.10cm
-      \raisebox{5cm}[0pt][0pt]{%
-        \makebox[\textwidth][l]{\includegraphics[width=0.9\linewidth]{<%{ top_logo }%>}}
+      \raisebox{0.1cm}[0pt][0pt]{%
+        \makebox[\textwidth][c]{\includegraphics[width=0.45\linewidth]{<%{ top_logo }%>}}
       }
 
       % \vskip2.10cm
@@ -161,7 +192,7 @@
 \setbeamertemplate{headline}{
   \leavevmode
   \begin{columns}[t,onlytextwidth]
-    \includegraphics[width=3cm,height=9cm]{<%{ left_colorbar }%>}
+%    \includegraphics[width=3cm,height=9cm]{<%{ left_bar_9 }%>}
     \column{.7\textwidth}
     \begin{beamercolorbox}[wd=\columnwidth, leftskip=2cm, ht=7.55cm]{headline}
       % \vskip1.5cm
@@ -201,15 +232,15 @@
     \column{.75\textwidth}
     % \begin{beamercolorbox}[leftskip=-0.5cm,wd=\columnwidth, ht=3cm]{logo}
     \begin{beamercolorbox}[wd=\columnwidth, ht=3cm]{logo}
-      \includegraphics[width=3cm,height=4cm]{<%{ left_colorbar }%>}
+      \includegraphics[width=3cm,height=3cm]{<%{ left_bar_4 }%>}
       % \vskip1.6ex
       % \vspace{0.3ex}
     \end{beamercolorbox}
     \column{.25\textwidth}
-    \begin{beamercolorbox}[leftskip=1cm,wd=\columnwidth,
+    \begin{beamercolorbox}[leftskip=-60.0cm,wd=\columnwidth,
       ht=3cm]{headline}
-      \raisebox{1.5cm}[0pt][0pt]{%
-        \makebox[\textwidth][c]{      \includegraphics[scale=0.5]{<%{ bottom_logo}%>}}
+      \raisebox{0.5cm}[0pt][0pt]{%
+        \makebox[\textwidth][l]{      \includegraphics[scale=0.25]{<%{ bottom_logo}%>}}
       }
 
       % \hfill \raisebox{-0.4cm}{\insertfooter}

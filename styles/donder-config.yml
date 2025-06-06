@@ -1,0 +1,74 @@
+theme_name: donders
+color_model: cmyk
+
+top_logo: "../img/DONDERS_LOGO_RGB_large.png"
+left_colorbar: "../img/VertDondersColorBar.jpg"
+bottom_logo: "../img/Radboud.png"
+
+fonts:
+  sans: "Source Sans Pro"
+  serif: "Source Serif Pro"
+  mono: "Source Code Pro"
+  package: sourcesanspro
+
+colors:
+  - name: dblack
+    hex: "000000"
+  - name: ddarkred
+    hex: "7A0002"
+  - name: dmediumred
+    hex: "AE1E15"
+  - name: dlightred
+    hex: "FB0007"
+  - name: dorange
+    hex: "FC5907"
+  - name: ddarkyellow
+    hex: "FEB80A"
+  - name: dyellow
+    hex: "FFFF0B"
+  - name: dwaterblue
+    hex: "1184B0"
+  - name: dgreen
+    hex: "4F9236"
+  - name: white
+    hex: "FFFFFF"
+
+headline:
+  fg: white
+  bg: white
+  title_fg: dblack
+  title_bg: white
+  author_fg: dlightred
+  author_bg: white
+  logo_fg: dblack
+  logo_bg: white
+  sep_bg: white
+  institute: dlightred
+
+logo:
+  bg: white
+  
+footline:
+  fg: white
+  bg: white
+
+body:
+  fg: dblack
+  bg: white
+
+block:
+  body_fg: dblack
+  body_bg: white
+  title_fg: white
+  title_bg: dlightred
+
+example:
+  title_fg: white
+  title_bg: white
+
+alerted_text:
+  fg: dblack
+
+caption:
+  name_fg: dblack
+
