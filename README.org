@@ -2,7 +2,7 @@
 
 * Beamer Poster Setup File
 
-#+HTML: <img src="img/poster-sc-snap.png" alt="Systemcrafter Styled Poster Snapshot" width="200"><img src="img/poster-d-snap.png" alt="Donder Styled Poster Snapshot" width="200">
+#+HTML: <img src="img/poster-sc-snap.png" alt="Systemcrafter Styled Poster Snapshot" width="200" style="display:inline-block;margin-right:10px;"><img src="img/poster-d-snap.png" alt="Donder Styled Poster Snapshot" width="200" style="display:inline-block;">
 
 This is a fork of an original beamer poster setup implementing a new
 easily customizable style as shown in the image above, plus the
