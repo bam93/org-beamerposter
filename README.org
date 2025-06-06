@@ -15,7 +15,7 @@ my convenience, and that I hope may be useful for you, too.
 In a nutshell:
 - use a =Makefile= to automate the different steps
 - provide easy customization of the style(s) using =yaml= and =mustache= files
-- add (and focus on) a "Systemcrafter" style for the poster
+- add (and focus on) a "Systemcrafter" style for the poster (only in portrait mode for now)
 - some helper script and some graphics for modifying the style
 
 * Legacy
