@@ -2,11 +2,7 @@
 
 * Beamer Poster Setup File
 
-[[./img/poster-snap.png][Systemcrafter Styled Poster Snapshot]]
-
-![Systemcrafter Styled Poster Snapshot](img/poster-snap.png)
-
-#+HTML: <img src="img/poster-snap.png" alt="Poster Snapshot" width="300">
+#+HTML: <img src="img/poster-snap.png" alt="Systemcrafter Styled Poster Snapshot" width="250">
 
 This is a fork of an original beamer poster setup. Below you will find
 two sections, first, under *Legacy*, the original README. Then under
