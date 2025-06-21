@@ -190,3 +190,51 @@ Run the script using the =make logo= Makefile target.
 The tex runs formally end with an error, despite the =.pdf= file being
 properly generated. This seems more like a PDFLatex/Latexmk/Lualatex
 incompatibility and I haven't yet been able to sort it out.
+
+* Known issues
+Issues with the commands =yq= and =mustache= have been reported. Those
+are used when doing =make style=.
+
+** =yq=
+The =yq= I use is from https://github.com/mikefarah/yq/. In my case it
+is version v4.45.4. For some reason, under Debian, there is a
+different =yq= command, which may cause the issue. Below more detail.
+
+This discrepancy with the =yq= tool arises because there are multiple,
+unrelated command-line utilities named =yq= in the open source
+ecosystem. For what I know, the most widely used =yq= today is Mike
+Farah’s =yq= (GitHub - mikefarah/yq: yq is a portable command-line
+YAML, JSON, XML, CSV, TOML and properties processor), a Go-based
+YAML/JSON processor with jq-like syntax. However, Debian and some
+other Linux distributions have historically packaged a different tool
+under the same name, often a Python-based wrapper around =jq=, or even
+other variants.
+
+Anyway, in the poster pipeline, I wanted to use a human readable
+format that can be easily edited, so I chose =YAML=. But further down
+the pipeline I need =json= format (of the same data), and I use the
+above =yq= to convert the =YAML= into =Json=. But you could use any tool
+that does that. One alternative would be Python’s PyYAML library for
+example. Could be as simple as:
+
+#+begin_src python
+  python3 -c 'import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout)' < input.yaml > output.json
+#+end_src
+
+** =mustache=
+I use mustache version 4.2.0. Some older (very old) versions do seem
+to have issues with the syntax =<% #colors %>=, which is a deviation
+from the standard ={{ }}= mustache syntax because Latex already uses
+the curly braces and mustache get confused, so the first line of the
+mustache file contains ~{{=<% %>=}}~, which tells it to replace the
+default ={{= and =}}= by =<%= and =%>=.
+
+The issue is that a variety of mustache implementations are
+available. If you are using the ruby implementation, it is quite old
+(around version 1.1.1), and does not support the syntax that changes
+the delimiter change from ={{= to =<%= and =}}= to =%>=.
+
+Try to use another mustache implementation that is more recent. On
+ubuntu, you can do =sudo apt-get install node-mustache= and then get
+=/usr/lib/nodejs/mustache/bin/mustache --version= with version 2.3.2,
+which works fine for me.
