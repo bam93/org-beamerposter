@@ -238,3 +238,7 @@ Try to use another mustache implementation that is more recent. On
 ubuntu, you can do =sudo apt-get install node-mustache= and then get
 =/usr/lib/nodejs/mustache/bin/mustache --version= with version 2.3.2,
 which works fine for me.
+
+** Support me
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V51N9YH2)
