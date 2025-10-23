@@ -241,4 +241,5 @@ which works fine for me.
 
 ** Support me
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V51N9YH2)
+[[https://ko-fi.com/V7V51N9YH2][file:https://ko-fi.com/img/githubbutton_sm.svg]]
+
